@@ -1,0 +1,315 @@
+/* ==================================================
+   ROOT VARIABLES
+================================================== */
+:root {
+  --primary: #800000;
+  --primary-soft: #a53a3a;
+  --bg-main: #fde7ec;
+  --bg-soft: #fcecd8;
+  --text-dark: #2f2f2f;
+  --text-muted: #555;
+  --radius: 22px;
+}
+
+/* ==================================================
+   BASE
+================================================== */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(120deg, var(--bg-main), var(--bg-soft));
+  color: var(--text-dark);
+  padding-top: 90px; /* fixed navbar space */
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
+.navbar-wrapper .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 8%;
+  background: linear-gradient(135deg, var(--bg-main), var(--bg-soft));
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-one-line {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-one-line .nav-link {
+  font-family: 'Bad Script', cursive;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+.nav-one-line .nav-link:hover,
+.nav-one-line .nav-link.active {
+  color: var(--primary-soft);
+}
+
+.beauty-blog-info{
+  max-width:950px;
+  margin:80px auto;
+  padding:0 20px;
+}
+
+.blog-header{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.blog-header h1{
+  font-family:'Playfair Display', serif;
+  font-size:44px;
+}
+
+.blog-header span{
+  color:#800000;
+}
+
+.subtitle{
+  color:#555;
+  margin-top:10px;
+}
+
+.blog-block{
+  background:#f3d9df;
+  padding:28px;
+  border-radius:22px;
+  margin-bottom:32px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.blog-block h2{
+  color:#800000;
+  margin-bottom:12px;
+}
+
+.blog-block ul{
+  margin-top:10px;
+  padding-left:18px;
+}
+
+.blog-block li{
+  padding:6px 0;
+}
+
+.blog-cta{
+  text-align:center;
+  margin-top:45px;
+  font-size:18px;
+}
+
+.blog-cta strong{
+  display:block;
+  margin-top:6px;
+  color:#800000;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .blog-header h1{
+    font-size:34px;
+  }
+}
+/* ==================================================
+   FOOTER
+================================================== */
+.footer {
+  background: linear-gradient(145deg, #fbe9e7, #f8d7da);
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+.footer h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+}
+.footer span{
+  color: var(--primary);
+  font-style: italic;
+}
+}
+
+.footer .social-icons {
+  margin: 20px 0;
+}
+
+.footer .social-icons a {
+  margin: 0 12px;
+  color: var(--primary);
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.footer .social-icons a:hover {
+  transform: translateY(-4px);
+}
+
+.footer .bottom {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.footer .bottom span{
+color: var(--primary);
+  font-style: italic;
+}
+
+.footer .bottom a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.footer .to-top {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer .to-top:hover {
+  background: var(--primary-soft);
+}
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .top-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .nav-one-line {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* ==================================================
+   SERVICES / MENU SECTION
+================================================== */
+.services-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 8vw;
+  background: linear-gradient(135deg, var(--bg-main) 60%, var(--bg-soft) 100%);
+  align-items: center;
+}
+
+/* LEFT IMAGE */
+.services-img-holder img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+}
+
+/* RIGHT CARDS */
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius);
+  padding: 32px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+/* CARD TITLE */
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.card-title span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+/* CARD DESCRIPTION */
+.card-desc {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* LEARN MORE BUTTON */
+.learn-more {
+  margin-top: 15px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.learn-more:hover {
+  background: var(--primary-soft);
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   SERVICES RESPONSIVE
+================================================== */
+@media (max-width: 900px) {
+  .services-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .services-img-holder img {
+    margin: 0 auto;
+  }
+}

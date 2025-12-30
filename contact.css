@@ -1,0 +1,408 @@
+/* ==================================================
+   RESET & VARIABLES
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #800000;
+  --primary-soft: #a53a3a;
+  --bg-main: #fde7ec;
+  --bg-soft: #fcecd8;
+  --text-dark: #2f2f2f;
+  --text-muted: #555;
+  --radius: 18px;
+}
+
+/* ==================================================
+   BASE
+================================================== */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(120deg, var(--bg-main), var(--bg-soft));
+  color: var(--text-dark);
+  padding-top: 90px;
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
+.navbar-wrapper .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 8%;
+  background: linear-gradient(135deg, var(--bg-main), var(--bg-soft));
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-one-line {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-one-line .nav-link {
+  font-family: 'Bad Script', cursive;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+.nav-one-line .nav-link:hover,
+.nav-one-line .nav-link.active {
+  color: var(--primary-soft);
+}
+
+/* HEADER */
+.contact-header {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.contact-header h1 {
+ font-family: 'Playfair Display', serif;
+  font-size: 2.7rem; 
+}
+
+.contact-header span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.contact-header p {
+  margin-top: 10px;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+/* SECTION */
+.contact-section {
+   background: linear-gradient(135deg, var(--bg-main) 60%, var(--bg-soft) 100%);
+  padding: 60px 0;
+}
+
+/* LAYOUT */
+.contact-row {
+  display: flex;
+  gap: 40px;
+}
+
+/* FORM */
+.contact-form,
+.contact-info {
+  flex: 1;
+  background: linear-gradient(135deg, var(--bg-main) 60%, var(--bg-soft) 100%);
+  padding: 35px;
+  color: var(--text-dark);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.contact-form h2,
+.contact-info h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form h2 span,
+.contact-info h2 span {
+   color: var(--primary);
+  font-style: italic;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+   background: var(--primary-soft);
+  transform: translateY(-2px);
+}
+
+/* INFO TEXT */
+.contact-info p {
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* MAP */
+.map-box {
+  margin-top: 15px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-row {
+    flex-direction: column;
+  }
+}
+
+/* ===============================
+   SMALL UI IMPROVEMENTS
+================================ */
+
+/* Smooth input focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(128, 0, 0, 0.15);
+}
+
+/* Better textarea height */
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* Contact info icons (if you add later) */
+.contact-info i {
+  color: var(--primary);
+  margin-right: 6px;
+}
+
+/* Section spacing polish */
+.contact-section {
+  padding-bottom: 80px;
+}
+
+/* Mobile padding fix */
+@media (max-width: 576px) {
+  .contact-form,
+  .contact-info {
+    padding: 25px 20px;
+  }
+
+  .contact-header h1 {
+    font-size: 2.2rem;
+  }
+}
+/* ==================================================
+   FOOTER
+================================================== */
+.footer {
+  background: linear-gradient(145deg, #fbe9e7, #f8d7da);
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+.footer h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+}
+.footer span{
+  color: var(--primary);
+  font-style: italic;
+}
+}
+
+.footer .social-icons {
+  margin: 20px 0;
+}
+
+.footer .social-icons a {
+  margin: 0 12px;
+  color: var(--primary);
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.footer .social-icons a:hover {
+  transform: translateY(-4px);
+}
+
+.footer .bottom {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.footer .bottom span{
+color: var(--primary);
+  font-style: italic;
+}
+
+.footer .bottom a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.footer .to-top {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer .to-top:hover {
+  background: var(--primary-soft);
+}
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .top-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .nav-one-line {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* ==================================================
+   SERVICES / MENU SECTION
+================================================== */
+.services-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 8vw;
+  background: linear-gradient(135deg, var(--bg-main) 60%, var(--bg-soft) 100%);
+  align-items: center;
+}
+
+/* LEFT IMAGE */
+.services-img-holder img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+}
+
+/* RIGHT CARDS */
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius);
+  padding: 32px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+/* CARD TITLE */
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.card-title span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+/* CARD DESCRIPTION */
+.card-desc {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* LEARN MORE BUTTON */
+.learn-more {
+  margin-top: 15px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.learn-more:hover {
+  background: var(--primary-soft);
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   SERVICES RESPONSIVE
+================================================== */
+@media (max-width: 900px) {
+  .services-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .services-img-holder img {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beauty Blog | Glizz Gurukulam</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Glizz Gurukulam Beauty Blog – Latest makeup trends, professional beauty tips, and career guidance for aspiring makeup artists.">
+  <meta name="keywords" content="beauty blog, makeup tips, bridal makeup, makeup career, Glizz Gurukulam">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@400;500&family=Bad+Script&display=swap" rel="stylesheet">
+
+
+<!-- Social Icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="beauty-blog.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="image/gg_logo.png" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav nav-one-line">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="course.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="event-gallery.html">Event Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="accreditations.html">Accreditations</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+<section class="beauty-blog-info">
+
+  <header class="blog-header">
+    <h1>Beauty Blog by <span>Glizz Gurukulam</span></h1>
+    <p class="subtitle">
+      Stay updated with the latest beauty trends, professional tips,
+      and career guidance from industry experts.
+    </p>
+  </header>
+
+  <!-- MAKEUP -->
+  <article class="blog-block">
+    <h2>💄 Makeup & Beauty Tips</h2>
+    <p>
+      Our beauty blog helps you master modern makeup techniques with
+      expert-approved knowledge. From beginners to professionals,
+      we cover every important aspect of makeup artistry.
+    </p>
+    <ul>
+      <li>Bridal & party makeup trends</li>
+      <li>Skin preparation & flawless base techniques</li>
+      <li>Product knowledge & professional tools</li>
+      <li>HD, Airbrush & traditional makeup looks</li>
+    </ul>
+  </article>
+
+  <!-- CAREER -->
+  <article class="blog-block">
+    <h2>📈 Career & Growth Guidance</h2>
+    <p>
+      Building a successful career in the beauty industry requires
+      the right guidance. Our blogs provide clear career direction
+      and practical growth strategies.
+    </p>
+    <ul>
+      <li>How to become a professional makeup artist</li>
+      <li>Freelancing vs salon jobs – career comparison</li>
+      <li>Client building & retention strategies</li>
+      <li>Instagram & social media growth tips</li>
+    </ul>
+  </article>
+
+  <!-- STUDENT -->
+  <article class="blog-block">
+    <h2>🎓 Student & Industry Insights</h2>
+    <p>
+      Get inspired by real student journeys and stay informed about
+      the latest beauty industry updates and professional events.
+    </p>
+    <ul>
+      <li>Student success stories</li>
+      <li>Workshops & live training highlights</li>
+      <li>Beauty industry news & trends</li>
+    </ul>
+  </article>
+
+  <!-- CTA -->
+  <div class="blog-cta">
+    <p>👉 Learn. Grow. Shine.</p>
+    <strong>👉 Turn knowledge into confidence.</strong>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <h2>Glizz <span> Gurukulam</span></h2>
+
+  <div class="social-icons">
+    <a href="https://twitter.com" target="blank">
+          <i class="fa-brands fa-twitter"></i>
+    </a>
+
+  <a href="https://wa.me/917096450888" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="https://www.instagram.com/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://www.facebook.com/" target="_blank">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>    
+
+    
+  </div>
+
+  <div class="bottom">
+    <p>© <strong>Glizz <span> Gurukulam</span> </strong>, All Rights Reserved.</p>
+    <p>
+      <a href="#">Terms & Conditions</a> |
+      <a href="#">Privacy Policy</a>
+    </p>
+    <p>Designed by <a href="#">Vansh.dev</a></p>
+  </div>
+
+  <button class="to-top" onclick="scrollToTop()">
+    <i class="fa-solid fa-angle-up"></i>
+  </button>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  // Scroll animation
+  const elements = document.querySelectorAll("[data-animate]");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  elements.forEach(el => observer.observe(el));
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

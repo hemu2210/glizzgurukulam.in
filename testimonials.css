@@ -1,0 +1,349 @@
+/* ==================================================
+   RESET & ROOT VARIABLES
+================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #800000;
+  --primary-soft: #a53a3a;
+  --bg-main: #fde7ec;
+  --bg-soft: #fcecd8;
+  --text-dark: #2f2f2f;
+  --text-muted: #555;
+  --radius: 22px;
+}
+
+/* ==================================================
+   BASE
+================================================== */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(120deg, var(--bg-main), var(--bg-soft));
+  color: var(--text-dark);
+  padding-top: 90px;
+  scroll-behavior: smooth;
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
+.navbar-wrapper .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 8%;
+  background: linear-gradient(135deg, var(--bg-main), var(--bg-soft));
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-one-line {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-one-line .nav-link {
+  font-family: 'Bad Script', cursive;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.nav-one-line .nav-link:hover,
+.nav-one-line .nav-link.active {
+  color: var(--primary-soft);
+}
+
+/* ==================================================
+   VIDEO SECTION HEADER
+================================================== */
+.video-section-header {
+  text-align: center;
+  margin: 70px auto 30px;
+  padding: 0 20px;
+}
+
+.video-section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+}
+
+.video-section-header span {
+  color: var(--primary);
+}
+
+.video-section-header p {
+  margin-top: 10px;
+  color: var(--text-muted);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 40px 8%;
+}
+
+.video-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+.video-card video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  color: #fff;
+  background: rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.video-card:hover .play-icon {
+  background: rgba(0,0,0,0.6);
+}
+
+
+/* ==================================================
+   MODAL VIDEO
+================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 2000;
+}
+
+.modal-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal video {
+  max-width: 75vw;
+  max-height: 85vh;
+  border-radius: 18px;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Modal Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow:hover {
+  background: #fff;
+  color: #000;
+}
+
+.arrow.left { left: 30px; }
+.arrow.right { right: 30px; }
+
+/* ==================================================
+   TESTIMONIAL PAGE
+================================================== */
+.testimonial-page {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+}
+
+.page-title span {
+  color: var(--primary);
+}
+
+.page-title p {
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* ==================================================
+   TESTIMONIAL GRID
+================================================== */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ==================================================
+   TESTIMONIAL CARD
+================================================== */
+.testimonial-card {
+  background: linear-gradient(135deg, #fff1f1, #ffe6d6);
+  padding: 28px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.15);
+}
+
+.testimonial-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+  margin: 6px 0;
+  font-size: 20px;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: var(--text-muted);
+  margin: 10px 0;
+}
+
+.course {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+.footer {
+  background: linear-gradient(145deg, #fbe9e7, #f8d7da);
+  text-align: center;
+  padding: 70px 20px 40px;
+  position: relative;
+}
+
+.footer h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+}
+
+.footer span {
+  color: var(--primary);
+}
+
+.footer .social-icons a {
+  margin: 0 12px;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+.footer .bottom {
+  margin-top: 20px;
+  color: var(--text-muted);
+}
+
+.footer .to-top {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  display: none;
+  cursor: pointer;
+}
+
+/* ==================================================
+   SCROLL ANIMATION
+================================================== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 600px) {
+
+  .video-section-header h2 {
+    font-size: 30px;
+  }
+
+  .page-title h1 {
+    font-size: 34px;
+  }
+
+  .video-card video {
+    height: 240px;
+  }
+
+  .nav-one-line {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .arrow.left { left: 10px; }
+  .arrow.right { right: 10px; }
+}

@@ -1,0 +1,356 @@
+/* ==================================================
+   RESET & VARIABLES
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #800000;
+  --primary-soft: #a94444;
+  --bg-main: #fde7ec;
+  --bg-soft: #fcecd8;
+  --card-bg: #f3d9df;
+  --text-dark: #2f2f2f;
+  --text-muted: #555;
+  --radius: 22px;
+}
+
+/* ==================================================
+   BASE
+================================================== */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(120deg, var(--bg-main), var(--bg-soft));
+  color: var(--text-dark);
+  padding-top: 90px; /* fixed navbar space */
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
+.navbar-wrapper .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 8%;
+  background: linear-gradient(135deg, var(--bg-main), var(--bg-soft));
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-one-line {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-one-line .nav-link {
+  font-family: 'Bad Script', cursive;
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: var(--primary);
+  transition: 0.3s;
+}
+
+.nav-one-line .nav-link:hover,
+.nav-one-line .nav-link.active {
+  color: var(--primary-soft);
+}
+
+
+/* HEADER */
+.gallery-header {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.gallery-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.7rem;
+}
+
+.gallery-header span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.gallery-header p {
+ margin-top: 10px;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+/* SECTION */
+.gallery-section {
+  background: linear-gradient(135deg, #f9dddd 60%, var(--bg-main) 100%);
+  padding: 60px 0;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+}
+
+/* GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* IMAGE BOX */
+.gallery-box {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transition: transform 0.35s ease;
+}
+
+.gallery-box:hover {
+  transform: translateY(-10px);
+}
+
+.gallery-box img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-box:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(242, 174, 196, 0.65)65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.gallery-box:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==================================================
+   FOOTER
+================================================== */
+.footer {
+  background: linear-gradient(145deg, #fbe9e7, #f8d7da);
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+.footer h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+}
+.footer span{
+  color: var(--primary);
+  font-style: italic;
+}
+}
+
+.footer .social-icons {
+  margin: 20px 0;
+}
+
+.footer .social-icons a {
+  margin: 0 12px;
+  color: var(--primary);
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.footer .social-icons a:hover {
+  transform: translateY(-4px);
+}
+
+.footer .bottom {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.footer .bottom span{
+color: var(--primary);
+  font-style: italic;
+}
+
+.footer .bottom a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.footer .to-top {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer .to-top:hover {
+  background: var(--primary-soft);
+}
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+[data-animate].show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .top-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .nav-one-line {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+/* ==================================================
+   SERVICES / MENU SECTION
+================================================== */
+.services-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 8vw;
+  background: linear-gradient(135deg, var(--bg-main) 60%, var(--bg-soft) 100%);
+  align-items: center;
+}
+
+/* LEFT IMAGE */
+.services-img-holder img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--radius);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+}
+
+/* RIGHT CARDS */
+.service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius);
+  padding: 32px 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+/* CARD TITLE */
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.card-title span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+/* CARD DESCRIPTION */
+.card-desc {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* LEARN MORE BUTTON */
+.learn-more {
+  margin-top: 15px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.learn-more:hover {
+  background: var(--primary-soft);
+  transform: translateY(-2px);
+}
+
+/* ==================================================
+   SERVICES RESPONSIVE
+================================================== */
+@media (max-width: 900px) {
+  .services-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .services-img-holder img {
+    margin: 0 auto;
+  }
+}

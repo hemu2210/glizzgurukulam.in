@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Career Support | Glizz Gurukulam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Quicksand:wght@400;500&family=Bad+Script&display=swap" rel="stylesheet">
+
+
+<!-- Social Icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="career.css" />
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+  <header class="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="image/gg_logo.png" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav nav-one-line">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="course.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="event-gallery.html">Event Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="accreditations.html">Accreditations</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+<section class="section">
+  <h1>Career <span>Support</span></h1>
+  <p style="text-align:center;color:#555;margin:20px 0 40px;">
+    Your career starts here — we support you every step of the way.
+  </p>
+
+  <div class="block">
+    <h2>💼 Job Placement Support</h2>
+    <ul>
+      <li>Placement assistance in salons & studios</li>
+      <li>Interview preparation guidance</li>
+      <li>Resume & portfolio support</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>🏢 Salon Tie-Ups</h2>
+    <ul>
+      <li>Professional salon connections</li>
+      <li>Industry exposure & networking</li>
+      <li>Real working environment experience</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <h2>🌍 Freelance & Business Guidance</h2>
+    <ul>
+      <li>How to start freelancing as a makeup artist</li>
+      <li>Branding, pricing & client handling</li>
+      <li>Instagram & social media growth tips</li>
+      <li>Guidance for starting your own salon</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <h2>Glizz <span> Gurukulam</span></h2>
+
+  <div class="social-icons">
+    <a href="https://twitter.com" target="blank">
+          <i class="fa-brands fa-twitter"></i>
+    </a>
+
+  <a href="https://wa.me/917096450888" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="https://www.instagram.com/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://www.facebook.com/" target="_blank">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>    
+
+    
+  </div>
+
+  <div class="bottom">
+    <p>© <strong>Glizz <span> Gurukulam</span> </strong>, All Rights Reserved.</p>
+    <p>
+      <a href="#">Terms & Conditions</a> |
+      <a href="#">Privacy Policy</a>
+    </p>
+    <p>Designed by <a href="#">Vansh.dev</a></p>
+  </div>
+
+  <button class="to-top" onclick="scrollToTop()">
+    <i class="fa-solid fa-angle-up"></i>
+  </button>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  // Scroll animation
+  const elements = document.querySelectorAll("[data-animate]");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  elements.forEach(el => observer.observe(el));
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

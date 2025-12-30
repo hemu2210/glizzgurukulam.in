@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Courses | Glizz Gurukulam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Quicksand:wght@400;500&family=Bad+Script&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="courses.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR (SAME AS HOME) ================= -->
+<header class="navbar-wrapper">
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="beautywebsite.html">
+        <img src="image/gg_logo.png" alt="Glizz Gurukulam Logo">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav nav-one-line">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link " href="course.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="event-gallery.html">Event Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="accreditations.html">Accreditations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="courses-header">
+  <h1>Our <span>Courses</span></h1>
+  <p>Professional beauty courses designed for real careers</p>
+</section>
+
+<!-- ================= COURSES ================= -->
+<section class="courses-container">
+  <div class="courses-grid">
+
+    <!-- CARD -->
+    <div class="course-card">
+      <img src="image/basic makeup.jfif" alt="">
+      <div class="course-content">
+        <h3>Basic<span> Makeup</span> </h3>
+        <p>Fundamental makeup techniques, skin preparation and basic looks.</p>
+        <ul>
+          <li>✔ Duration: 1 Month</li>
+          <li>✔ Beginner Level</li>
+          <li>✔ Certification</li>
+        </ul>
+        <button class="btn" onclick="openPopup('Basic Makeup')">Enroll Now</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="image/Professional Makeup.jfif" alt="">
+      <div class="course-content">
+        <h3>Professional<span> Makeup</span></h3>
+        <p>Advanced bridal & editorial makeup with live practice.</p>
+        <ul>
+          <li>✔ Duration: 3 Months</li>
+          <li>✔ Advanced Level</li>
+          <li>✔ Live Models</li>
+        </ul>
+        <button class="btn" onclick="openPopup('Professional Makeup')">Enroll Now</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="image/bridal.jfif" alt="">
+      <div class="course-content">
+        <h3>Bridal<span> Makeup</span></h3>
+        <p>HD, Airbrush & traditional bridal makeup techniques.</p>
+        <ul>
+          <li>✔ Duration: 2 Months</li>
+          <li>✔ Bridal Specialist</li>
+          <li>✔ Portfolio Support</li>
+        </ul>
+        <button class="btn" onclick="openPopup('Bridal Makeup')">Enroll Now</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="image/hair.jfif" alt="">
+      <div class="course-content">
+        <h3>Hair<span> Styling</span></h3>
+        <p>Modern bridal, party & fashion hairstyling techniques.</p>
+        <ul>
+          <li>✔ Duration: 1.5 Months</li>
+          <li>✔ Hands-on</li>
+          <li>✔ Certificate</li>
+        </ul>
+        <button class="btn" onclick="openPopup('Hair Styling')">Enroll Now</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="image/Nails.jfif" alt="">
+      <div class="course-content">
+        <h3>Nail<span> Art</span> </h3>
+        <p>Gel, acrylic & creative nail art designs.</p>
+        <ul>
+          <li>✔ Duration: 1 Month</li>
+          <li>✔ Practical Training</li>
+          <li>✔ Starter Kit</li>
+        </ul>
+        <button class="btn" onclick="openPopup('Nail Art')">Enroll Now</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="image/cosmetology.jfif" alt="">
+      <div class="course-content">
+        <h3>Cosme<span>tology</span></h3>
+        <p>Complete beauty program with salon management.</p>
+        <ul>
+          <li>✔ Duration: 6 Months</li>
+          <li>✔ Career Focus</li>
+          <li>✔ Placement Help</li>
+        </ul>
+        <button class="btn" onclick="openPopup('Cosmetology')">Enroll Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= POPUP ================= -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <span class="close" onclick="closePopup()">×</span>
+    <h2>Admission Form</h2>
+    <p id="courseName"></p>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="tel" placeholder="Phone">
+    <button class="btn">Submit</button>
+  </div>
+</div>
+
+<!-- ================= JS ================= -->
+<script>
+function openPopup(course) {
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("courseName").innerText = "Course: " + course;
+}
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <h2>Glizz <span> Gurukulam</span></h2>
+
+  <div class="social-icons">
+    <a href="https://twitter.com" target="blank">
+          <i class="fa-brands fa-twitter"></i>
+    </a>
+
+  <a href="https://wa.me/917096450888" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="https://www.instagram.com/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://www.facebook.com/" target="_blank">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>    
+
+    
+  </div>
+
+  <div class="bottom">
+    <p>© <strong>Glizz <span> Gurukulam</span> </strong>, All Rights Reserved.</p>
+    <p>
+      <a href="#">Terms & Conditions</a> |
+      <a href="#">Privacy Policy</a>
+    </p>
+    <p>Designed by <a href="#">Vansh.dev</a></p>
+  </div>
+
+  <button class="to-top" onclick="scrollToTop()">
+    <i class="fa-solid fa-angle-up"></i>
+  </button>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+  // Scroll animation
+  const elements = document.querySelectorAll("[data-animate]");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+  elements.forEach(el => observer.observe(el));
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
